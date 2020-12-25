@@ -14,42 +14,50 @@ body {
 a {
     text-decoration: none;
 }
-.loading{
-
+.loading {
+    /*border :1px solid red;*/
+    width: 160px;
+    height: 160px;
+    position: relative;
 }
-.loading span{
-    display: inline-block;
+.loading span {
+    position: absolute;
     width: 40px;
     height: 40px;
-    background-color: gray;
-    border-radius: 50%;
-    animation: loading 0.7s linear infinite;
+    background-color: crimson;
+    animation: loading 1.5s infinite;
 }
 .loading span:nth-child(1){
-    animation-delay: 0s;
-    background-color: red;
-}
 
+    animation-delay: 0.8s;
+}
 .loading span:nth-child(2){
-    animation-delay: 0.2s;
-    background-color: dodgerblue;
-}
-.loading span:nth-child(3){
-    animation-delay: 0.4s;
-    background-color: yellowgreen;
+
 }
 
-@keyframes loading{
-    0% {
-        opacity: 0;
-        transform: scale(0.5);
+@keyframes loading {
+    0%{
+        top: 0;
+        left: 0;
+    }
+    25%{
+        top: 0;
+        left: calc(100% - 40px);
+        background-color: dodgerblue;
     }
     50%{
-        opacity: 1;
-        transform: scale(1.2);
+        top:calc(100% - 40px);
+        left: calc(100% - 40px);
+        background-color: orange;
+    }
+    75%{
+        top:calc(100% - 40px);
+        left: 0;
+        background-color: yellowgreen;
+
     }
     100%{
-        opacity: 0;
-        transform: scale(0.5);
+        top:0;
+        left:0;
     }
 }
