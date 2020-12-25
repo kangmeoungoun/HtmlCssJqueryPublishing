@@ -1,1 +1,1 @@
-![animation](https://user-images.githubusercontent.com/40969203/103133371-6cb61d80-46ed-11eb-8c1a-ae217a191916.gif)
+![animation](https://user-images.githubusercontent.com/40969203/103133882-886ef300-46f0-11eb-9b40-be2976b36061.gif)
