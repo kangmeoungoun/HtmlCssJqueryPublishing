@@ -1,16 +1,55 @@
-/* Google Web Fonts CDN */
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+
 body {
-    font-family: 'Noto Sans KR',sans-serif;
+    font-family: 'Montserrat', sans-serif;
     line-height: 1.5em;
     margin: 0;
-    background: linear-gradient(90deg,#DCE35B,#45B649);
+    font-weight: 300;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 a {
-    color : #222;
     text-decoration: none;
+}
+.loading{
+
+}
+.loading span{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: gray;
+    border-radius: 50%;
+    animation: loading 0.7s linear infinite;
+}
+.loading span:nth-child(1){
+    animation-delay: 0s;
+    background-color: red;
+}
+
+.loading span:nth-child(2){
+    animation-delay: 0.2s;
+    background-color: dodgerblue;
+}
+.loading span:nth-child(3){
+    animation-delay: 0.4s;
+    background-color: yellowgreen;
+}
+
+@keyframes loading{
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    50%{
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    100%{
+        opacity: 0;
+        transform: scale(0.5);
+    }
 }
