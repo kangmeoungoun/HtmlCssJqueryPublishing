@@ -9,35 +9,81 @@ body {
     margin: 0;
     font-weight: 300;
     color :#222;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    background-color: #f4f4f4;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 a {
     color :#222;
     text-decoration: none;
 }
-
-.gnb a:before {
-    content: '01';
-    background-color: royalblue;
-    color: #fff;
-    width: 20px;
-    height: 20px;
-    display: inline-block;
-    text-align: center;
-    line-height: 20px;
-    border-radius: 50%;
-    margin-right: 5px;
-    font-size: 12px;
+.gnb{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 600px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.08);
+    padding: 60px 30px;
+    display: flex;
 }
-.gnb a:after {
-    content: 'update';
-    font-size: 12px;
-    background-color: crimson;
-    color: #fff;
-    margin-left: 5px;
-    padding: 2px;
-    border-radius: 3px;
+.gnb li {
+
+    /*
+        box-sizing: border-box;
+        float: left;
+        width: 120px;
+        text-align: center;
+    */
+    flex:1;
+    text-align: center;
+}
+.gnb li a{
+    font-size: 14px;
+    position: relative;
+}
+.gnb li:nth-child(1) a:before{
+    content: '';
+    position: absolute;
+    background-color: dodgerblue;
+    height: 2px;
+    width: 0;
+    bottom: -10px;
+    transition: 0.5s;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.gnb li:nth-child(1) a:hover:before{
+    width: 100%;
+}
+.gnb li:nth-child(2) a:before{
+    content: '';
+    position: absolute;
+    background-color: dodgerblue;
+    height: 2px;
+    width: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.gnb li:nth-child(2) a:hover:before{
+    width: 100%;
+}
+.gnb li:nth-child(3) a:before{
+    content: '';
+    position: absolute;
+    background-color: dodgerblue;
+    height: 2px;
+    width: 0;
+    bottom: -10px;
+    transition: 0.5s;
+    right: 0;
+}
+
+.gnb li:nth-child(3) a:hover:before{
+    width: 100%;
 }
